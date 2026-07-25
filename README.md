@@ -1,82 +1,121 @@
-# Cmd-em-html-e-python-so-para-se-divestir
-somente dirveção
+cmd em html somete pra diverção
 
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imagem de Fundo</title>
+    <title>Tristeza :(</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
         }
 
-        body {
-            width: 100vw;
-            height: 100vh;
-            background-image: url("carro.jpeg");
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+        body{
+            width:100vw;
+            height:100vh;
+            overflow:hidden;
 
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            background:#000;
         }
 
-        .texto {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 100px;
-            letter-spacing: 8px;
-            font-weight: bold;
-            color: #fff;
+        /* Fundo com efeito de grave suave */
+        .fundo{
+            position:fixed;
+            inset:0;
+            background:url("carro.jpeg") center center/cover no-repeat;
+            animation:graveSuave 1.2s ease-in-out infinite;
+            z-index:-1;
+        }
 
-            text-transform: uppercase;
-            text-align: center;
+        @keyframes graveSuave{
+            0%{
+                transform:scale(1);
+                filter:brightness(1);
+            }
 
-            background: rgba(0, 0, 0, 0.7);
-            padding: 25px 50px;
-            border-radius: 25px;
+            25%{
+                transform:scale(1.005);
+                filter:brightness(1.02);
+            }
 
-            border: 4px solid white;
+            50%{
+                transform:scale(1.012);
+                filter:brightness(1.06);
+            }
+
+            75%{
+                transform:scale(1.005);
+                filter:brightness(1.02);
+            }
+
+            100%{
+                transform:scale(1);
+                filter:brightness(1);
+            }
+        }
+
+        .texto{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:40px;
+            letter-spacing:10px;
+            font-weight:bold;
+            color:#fff;
+
+            text-transform:uppercase;
+            text-align:center;
+
+            background:rgba(0,0,0,.7);
+            padding:25px 50px;
+            border-radius:25px;
+
+            border:4px solid #fff;
 
             text-shadow:
                 0 0 10px #fff,
-                0 0 20px #ff0000,
-                0 0 40px #ff0000;
+                0 0 20px red,
+                0 0 40px red;
 
             box-shadow:
                 0 0 20px red,
                 inset 0 0 20px black;
 
-            animation: brilho 1.5s infinite alternate;
+            animation:brilho 1.5s infinite alternate;
         }
 
-        @keyframes brilho {
-            from {
-                transform: scale(1);
-                filter: brightness(1);
+        @keyframes brilho{
+            from{
+                transform:scale(1);
+                filter:brightness(1);
             }
 
-            to {
-                transform: scale(1.08);
-                filter: brightness(1.4);
+            to{
+                transform:scale(1.08);
+                filter:brightness(1.4);
             }
         }
     </style>
 </head>
 
 <body>
+
+    <div class="fundo"></div>
+
     <div class="texto">
         SINTA O SOM DESCRAAAAAAAAAAAAÇA
-        
-        CINTURA DE MOLA 
+        <br><br>
+        SO AS BRABAS
     </div>
+
 </body>
 </html>
+
